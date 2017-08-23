@@ -5,6 +5,7 @@ defmodule Protobuf.MessageProps do
     tags_map: %{integer => integer},
     field_props: %{integer => FieldProps.T},
     repeated_fields: [atom],
+    oneof: [{atom, non_neg_integer}],
 
     enum?: boolean,
     extendable?: boolean,
@@ -16,6 +17,7 @@ defmodule Protobuf.MessageProps do
     tags_map: %{},
     field_props: %{},
     repeated_fields: [],
+    oneof: [],
 
     enum?: false,
     oneof?: false,
